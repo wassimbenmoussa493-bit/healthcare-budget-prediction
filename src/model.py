@@ -91,12 +91,21 @@ plt.grid(True)
 
 plt.show()
 # Predict expenses for the next 3 months
+# ==========================================
+# TASK HEAL-15: FUTURE EXPENSES PREDICTION
+# ==========================================
 
+# Train the final model using all historical data
+future_model = LinearRegression()
+future_model.fit(X, y)
+
+# Define the next 3 months
 future_months = pd.DataFrame({
     "month_number": [13, 14, 15]
 })
 
-future_predictions = model.predict(future_months)
+# Generate future predictions
+future_predictions = future_model.predict(future_months)
 
 print("\nFuture Expenses Predictions:")
 
