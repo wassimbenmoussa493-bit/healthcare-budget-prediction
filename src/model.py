@@ -26,7 +26,7 @@ df["month_number"] = range(1, len(df) + 1)
 # Display the prepared dataset
 print("\nPrepared Dataset:")
 print(df[["month", "month_number", "expenses"]])
-# Define features (X) and target (y)
+# HEAL-11: Selection of features and target variable
 X = df[["month_number"]]
 y = df["expenses"]
 
